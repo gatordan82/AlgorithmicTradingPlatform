@@ -27,6 +27,9 @@
     <ClInclude Include="TickEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BarEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Event.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EventTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BarEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
