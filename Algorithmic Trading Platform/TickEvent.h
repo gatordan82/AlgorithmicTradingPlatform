@@ -16,9 +16,9 @@ private:
 	double bid;
 	double ask;
 
+	TickEvent();
 
 public:
-	TickEvent();
 	TickEvent(std::string ticker_, boost::posix_time::ptime time_, double bid_, double ask_);
 	TickEvent(const TickEvent& te);
 

@@ -3,7 +3,8 @@
 
 #include "Event.h"
 #include <string>
-#include "boost\date_time\posix_time\ptime.hpp"
+#include "boost\date_time\posix_time\posix_time.hpp"
+#include <unordered_map>
 
 class BarEvent :
 	public Event
@@ -20,15 +21,17 @@ private:
 	int volume;
 	double adjClosePrice;
 	std::string periodReadable;
+	static std::unordered_map<int, std::string> const periodMap;
+
+	BarEvent();
 
 	std::string readablePeriod();
 
 public:
-	BarEvent();
 	BarEvent(std::string ticker_, boost::posix_time::ptime time_,
 		     int period_, double openPrice_, double highPrice_,
 		     double lowPrice_, double closePrice_, int volume_,
-		     double adjClostPrice_);
+		     double adjClosePrice_);
 	BarEvent(const BarEvent& be);
 
 	~BarEvent();
