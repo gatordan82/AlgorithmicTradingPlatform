@@ -136,15 +136,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActionType.h" />
     <ClInclude Include="BarEvent.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
+    <ClInclude Include="SignalEvent.h" />
     <ClInclude Include="TickEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BarEvent.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventTest.cpp" />
+    <ClCompile Include="SignalEvent.cpp" />
     <ClCompile Include="TickEvent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

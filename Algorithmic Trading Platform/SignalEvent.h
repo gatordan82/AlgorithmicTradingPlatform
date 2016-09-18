@@ -1,22 +1,27 @@
-#ifndef SIGNALEVENT_H
-#define SIGNALEVENT_H
-
+#ifndef _SIGNALEVENT_H
+#define _SIGNALEVENT_H
 
 #include "Event.h"
-#include "EventEnum.h"
-#include <boost\date_time.hpp>
-
+#include <string>
+#include "ActionType.h"
 
 class SignalEvent : public Event
 {
+private:
+	EventType type;
+	std::string ticker;
+	ActionType action;
+
+	SignalEvent();
+
 public:
-    SignalEvent();
+	SignalEvent(std::string ticker_, ActionType action_);
+	SignalEvent(SignalEvent& se);
+
     ~SignalEvent();
 
-private:
-    EventType type;
-    std::string symbol_;
-    //boost:: dateTime_;
+	SignalEvent& operator=(SignalEvent& se);
+
 };
 
-#endif // !SIGNALEVENT_H
+#endif // !_SIGNALEVENT_H
