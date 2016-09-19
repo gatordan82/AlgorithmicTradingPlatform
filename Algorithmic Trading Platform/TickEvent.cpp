@@ -38,7 +38,7 @@ TickEvent& TickEvent::operator=(const TickEvent& te)
 
 EventType TickEvent::getType()
 {
-	return EventType::TICK;
+	return type;
 }
 
 std::string TickEvent::toString()

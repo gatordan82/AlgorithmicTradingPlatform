@@ -25,9 +25,15 @@ SignalEvent& SignalEvent::operator=(SignalEvent& se)
 {
 	if (&se != this)
 	{
+		type = se.type;
 		ticker = se.ticker;
 		action = se.action;
 	}
 
 	return *this;
+}
+
+EventType SignalEvent::getType()
+{
+	return type;
 }

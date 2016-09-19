@@ -12,12 +12,22 @@ class OrderEvent :
 {
 private:
 	EventType type;
-
-
+	std::string ticker;
+	ActionType action;
+	double quantity;
+	
+	OrderEvent();
 
 public:
-	OrderEvent();
+	OrderEvent(std::string ticker_, ActionType action_, double quantity_);
+	OrderEvent(OrderEvent& oe);
+
 	~OrderEvent();
+
+	OrderEvent& operator=(OrderEvent& oe);
+
+	std::string toString();
+	EventType getType();
 };
 
 #endif // !_ORDEREVENT_H

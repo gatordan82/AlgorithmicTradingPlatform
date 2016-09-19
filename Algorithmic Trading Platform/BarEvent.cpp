@@ -88,3 +88,8 @@ std::string BarEvent::toString()
 		+ ", Volume: " + std::to_string(volume)
 		+ ", Adj. Close: " + std::to_string(adjClosePrice);
 }
+
+EventType BarEvent::getType()
+{
+	return type;
+}

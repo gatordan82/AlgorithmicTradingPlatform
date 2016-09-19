@@ -22,6 +22,7 @@ public:
 
 	SignalEvent& operator=(SignalEvent& se);
 
+	EventType getType();
 };
 
 #endif // !_SIGNALEVENT_H

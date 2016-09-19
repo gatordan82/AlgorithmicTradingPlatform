@@ -39,6 +39,7 @@ public:
 	BarEvent& operator=(const BarEvent& be);
 
 	std::string toString();
+	EventType getType();
 };
 
 #endif
