@@ -17,7 +17,7 @@ std::unordered_map<int, std::string> const BarEvent::periodMap
 	{604800, "1 week"}
 };
 
-BarEvent::BarEvent()
+BarEvent::BarEvent() : type{ EventType::BAR }
 {
 }
 
@@ -39,14 +39,16 @@ BarEvent::BarEvent(std::string ticker_,
 					double closePrice_, 
 					int volume_, 
 					double adjClosePrice_=std::nan(""))
-	: ticker{ ticker_ }, time{ time_ }, period{ period_ }, openPrice{ openPrice_ }, highPrice{ highPrice_ }, lowPrice{ lowPrice_ },
+	: type{ EventType::BAR }, ticker { ticker_ }, time{ time_ }, period{ period_ }, 
+	openPrice{ openPrice_ }, highPrice{ highPrice_ }, lowPrice{ lowPrice_ },
 	closePrice{ closePrice_ }, volume{ volume_ }, adjClosePrice{ adjClosePrice_ }
 {
 }
 
 BarEvent::BarEvent(const BarEvent& be)
-	: ticker{ be.ticker }, time{ be.time }, period{ be.period }, openPrice{ be.openPrice }, highPrice{ be.highPrice },
-	lowPrice{ be.lowPrice }, closePrice{ be.closePrice }, volume{ be.volume }, adjClosePrice{ be.adjClosePrice }
+	: type{ be.type }, ticker { be.ticker }, time{ be.time }, period{ be.period }, 
+	openPrice{ be.openPrice }, highPrice{ be.highPrice }, lowPrice{ be.lowPrice }, 
+	closePrice{ be.closePrice }, volume{ be.volume }, adjClosePrice{ be.adjClosePrice }
 {
 }
 
@@ -59,6 +61,7 @@ BarEvent& BarEvent::operator=(const BarEvent& be)
 {
 	if (&be != this)
 	{
+		type = be.type;
 		ticker = be.ticker;
 		time = be.time;
 		period = be.period;

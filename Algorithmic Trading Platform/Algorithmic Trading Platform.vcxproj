@@ -140,6 +140,7 @@
     <ClInclude Include="BarEvent.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
+    <ClInclude Include="OrderEvent.h" />
     <ClInclude Include="SignalEvent.h" />
     <ClInclude Include="TickEvent.h" />
   </ItemGroup>
@@ -147,6 +148,7 @@
     <ClCompile Include="BarEvent.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventTest.cpp" />
+    <ClCompile Include="OrderEvent.cpp" />
     <ClCompile Include="SignalEvent.cpp" />
     <ClCompile Include="TickEvent.cpp" />
   </ItemGroup>

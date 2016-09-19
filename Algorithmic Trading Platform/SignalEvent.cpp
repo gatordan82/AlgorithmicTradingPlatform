@@ -2,17 +2,17 @@
 
 
 
-SignalEvent::SignalEvent() : type_{SIGNAL}
+SignalEvent::SignalEvent() : type{ EventType::SIGNAL }
 {
 }
 
 SignalEvent::SignalEvent(std::string ticker_, ActionType action_)
-	: ticker{ ticker_ }, action{ action_ }
+	: type{ EventType::SIGNAL }, ticker { ticker_ }, action{ action_ }
 {
 }
 
 SignalEvent::SignalEvent(SignalEvent & se)
-	: ticker{ se.ticker }, action{ se.action }
+	: type{ EventType::SIGNAL }, ticker{ se.ticker }, action{ se.action }
 {
 }
 
