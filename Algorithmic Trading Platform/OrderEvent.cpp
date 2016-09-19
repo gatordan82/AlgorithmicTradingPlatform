@@ -16,7 +16,6 @@ OrderEvent::OrderEvent(OrderEvent& oe)
 {
 }
 
-
 OrderEvent::~OrderEvent()
 {
 }
@@ -36,8 +35,14 @@ OrderEvent& OrderEvent::operator=(OrderEvent& oe)
 
 std::string OrderEvent::toString()
 {
+	std::string actionStr;
+	if (action == ActionType::BUY)
+		actionStr = "BUY";
+	else
+		actionStr = "SELL";
+
 	return "Type: ORDER, Ticker: " + ticker
-		+ ", Action: " + actionTypeToString(action)
+		+ ", Action: " + actionStr
 		+ ", Quantity: " + std::to_string(quantity);
 }
 

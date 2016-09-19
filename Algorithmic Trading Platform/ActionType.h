@@ -2,6 +2,7 @@
 #define _ACTIONTYPE_H
 
 #include <string>
+#include <unordered_map>
 
 enum class ActionType : short
 {
@@ -9,17 +10,5 @@ enum class ActionType : short
 	BUY = 1
 };
 
-std::string actionTypeToString(ActionType at)
-{
-	switch (at)
-	{
-	case ActionType::BUY:
-		return "BUY";
-		break;
-	case ActionType::SELL:
-		return "SELL";
-		break;
-	}
-}
 
 #endif // !_ACTIONTYPE_H
