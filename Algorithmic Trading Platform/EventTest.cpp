@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TickEvent.h"
+#include "OrderEvent.h"
 #include "boost\date_time\gregorian\gregorian.hpp"
 
 using boost::posix_time::ptime;
@@ -16,7 +17,11 @@ int main()
 
 	TickEvent tick(sym, timeStamp, bid, ask);
 
-	std::cout << tick.toString() << std::endl;
+	std::cout << tick.toString() << std::endl << std::endl;
+
+	OrderEvent oe(sym, ActionType::BUY, 100.0);
+
+	std::cout << "Ordering: " << oe.toString() << std::endl;
 
 	std::cin.get();
 
