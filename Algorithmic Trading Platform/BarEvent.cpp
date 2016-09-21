@@ -21,7 +21,7 @@ BarEvent::BarEvent() : type{ EventType::BAR }
 {
 }
 
-std::string BarEvent::readablePeriod()
+std::string BarEvent::readablePeriod() const
 {
 	auto it = periodMap.find(period);
 	if (it != periodMap.end())
@@ -76,7 +76,7 @@ BarEvent& BarEvent::operator=(const BarEvent& be)
 	return *this;
 }
 
-std::string BarEvent::toString()
+std::string BarEvent::toString() const
 {
 	return "Type: BAR, Ticker: " + ticker
 		+ ", Datetime: " + boost::posix_time::to_simple_string(time)
@@ -89,7 +89,7 @@ std::string BarEvent::toString()
 		+ ", Adj. Close: " + std::to_string(adjClosePrice);
 }
 
-EventType BarEvent::getType()
+EventType BarEvent::getType() const
 {
 	return type;
 }

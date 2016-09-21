@@ -26,8 +26,8 @@ public:
 
 	OrderEvent& operator=(OrderEvent& oe);
 
-	std::string toString();
-	EventType getType();
+	std::string toString() const;
+	EventType getType() const;
 };
 
 #endif // !_ORDEREVENT_H

@@ -33,7 +33,7 @@ SignalEvent& SignalEvent::operator=(SignalEvent& se)
 	return *this;
 }
 
-EventType SignalEvent::getType()
+EventType SignalEvent::getType() const
 {
 	return type;
 }

@@ -33,7 +33,7 @@ OrderEvent& OrderEvent::operator=(OrderEvent& oe)
 	return *this;
 }
 
-std::string OrderEvent::toString()
+std::string OrderEvent::toString() const
 {
 	std::string actionStr;
 	if (action == ActionType::BUY)
@@ -46,7 +46,7 @@ std::string OrderEvent::toString()
 		+ ", Quantity: " + std::to_string(quantity);
 }
 
-EventType OrderEvent::getType()
+EventType OrderEvent::getType() const
 {
 	return type;
 }
