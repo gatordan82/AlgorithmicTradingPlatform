@@ -136,6 +136,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractBarPriceHandler.h" />
+    <ClInclude Include="AbstractTickPriceHandler.h" />
     <ClInclude Include="ActionType.h" />
     <ClInclude Include="BarEvent.h" />
     <ClInclude Include="Event.h" />
@@ -146,6 +148,8 @@
     <ClInclude Include="TickEvent.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractBarPriceHandler.cpp" />
+    <ClCompile Include="AbstractTickPriceHandler.cpp" />
     <ClCompile Include="BarEvent.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventTest.cpp" />
