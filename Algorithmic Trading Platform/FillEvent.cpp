@@ -40,7 +40,7 @@ FillEvent& FillEvent::operator=(FillEvent& fe)
 	return *this;
 }
 
-EventType FillEvent::getType()
+EventType FillEvent::getType() const
 {
 	return type;
 }

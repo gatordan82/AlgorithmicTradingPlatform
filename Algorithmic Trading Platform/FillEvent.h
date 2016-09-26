@@ -33,7 +33,7 @@ public:
 
 	FillEvent& operator=(FillEvent& fe);
 
-	EventType getType();
+	EventType getType() const;
 };
 
 #endif

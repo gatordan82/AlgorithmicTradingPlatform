@@ -21,11 +21,11 @@ private:
 	int volume;
 	double adjClosePrice;
 	std::string periodReadable;
-	static std::unordered_map<int, std::string> const periodMap;
+	static const std::unordered_map<int, std::string> periodMap;
 
 	BarEvent();
 
-	std::string readablePeriod();
+	std::string readablePeriod() const;
 
 public:
 	BarEvent(std::string ticker_, boost::posix_time::ptime time_,
@@ -38,8 +38,8 @@ public:
 	
 	BarEvent& operator=(const BarEvent& be);
 
-	std::string toString();
-	EventType getType();
+	std::string toString() const;
+	EventType getType() const;
 };
 
 #endif

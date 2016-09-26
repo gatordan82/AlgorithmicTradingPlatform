@@ -22,7 +22,7 @@ public:
 
 	SignalEvent& operator=(SignalEvent& se);
 
-	EventType getType();
+	EventType getType() const;
 };
 
 #endif // !_SIGNALEVENT_H

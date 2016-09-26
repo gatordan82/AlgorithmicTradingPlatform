@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Events">
       <UniqueIdentifier>{48093145-5d55-40db-8b1b-780b545a3a3b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\PriceHandlers">
+      <UniqueIdentifier>{a9ec95e2-b218-4633-b621-5d997ddf497c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Price Handlers">
+      <UniqueIdentifier>{1c6b4597-828d-4474-beb9-b596be805523}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -48,6 +54,12 @@
     <ClInclude Include="SignalEvent.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractBarPriceHandler.h">
+      <Filter>Header Files\PriceHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractTickPriceHandler.h">
+      <Filter>Header Files\PriceHandlers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BarEvent.cpp">
@@ -70,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="SignalEvent.cpp">
       <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractBarPriceHandler.cpp">
+      <Filter>Source Files\Price Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractTickPriceHandler.cpp">
+      <Filter>Source Files\Price Handlers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

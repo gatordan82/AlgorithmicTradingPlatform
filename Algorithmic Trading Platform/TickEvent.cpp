@@ -36,12 +36,12 @@ TickEvent& TickEvent::operator=(const TickEvent& te)
 	return *this;
 }
 
-EventType TickEvent::getType()
+EventType TickEvent::getType() const
 {
 	return type;
 }
 
-std::string TickEvent::toString()
+std::string TickEvent::toString() const
 {
 	return "Type: TICK, Ticker: " + ticker
 		+ ", Datetime: " + boost::posix_time::to_simple_string(time)
