@@ -26,8 +26,8 @@ public:
 
 	TickEvent& operator=(const TickEvent& te);
 
-	EventType getType();
-	std::string toString();
+	EventType getType() const;
+	std::string toString() const;
 };
 
 
